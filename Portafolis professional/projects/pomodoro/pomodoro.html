@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Kanban</title>
+    <link rel="stylesheet" href="pomodoro.css">
+</head>
+<body>
+    <h1>Pomodoro Kanban</h1>
+    <div id="pomodoro-container">
+        <div id="pomodoro-timer">
+            <div id="timer-display">25:00</div>
+            <div id="controls">
+                <button id="start">Començar</button>
+                <button id="reset">Reiniciar</button>
+            </div>            
+            <div id="options">
+                <button id="short-break">Pausa curta</button>
+                <button id="long-break">Pausa llarga</button>
+            </div>
+            <audio id="alert-sound" src="./so/goofy-ahh-sounds.mp3"></audio>           
+        </div>
+    </div>
+
+    <div id="kanban-container">
+        <div id="task-form">
+            <h2>Afegeix una nova tasca</h2>
+            <input type="text" id="task-title" placeholder="Títol">
+            <textarea id="task-description" placeholder="Descripció"></textarea>
+            <select id="task-category">
+                <option value="" selected disabled>Selecciona una categoria</option>
+                <option value="disseny">Disseny</option>
+                <option value="front-end">Front-end</option>
+                <option value="back-end">Back-end</option>
+            </select>
+            <button id="add-task">Afegir Tasca</button>
+        </div>        
+        <div id="kanban-board">
+            <div class="column" id="pending-column">
+                <h3>Pendent</h3>
+            </div>
+            <div class="column" id="progress-column">
+                <h3>En Progrés</h3>
+            </div>
+            <div class="column" id="completed-column">
+                <h3>Completades</h3>
+            </div>
+        </div>
+    </div>    
+
+    <script src="pomodoro.js"></script>
+</body>
+</html>

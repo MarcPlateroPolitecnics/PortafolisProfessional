@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="portafolis.css">
+</head>
+<body>
+    <!-- Barra de navegació amb Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+
+    <!-- Secció Sobre Mi -->
+<section id="about" class="section bg-danger text-white">
+    <div class="container">
+        <div class="row justify-content-center align-items-center" id="about-header">
+            <div class="col-md-6 text-center">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="img/M.png" alt="Logo" width="135" height="135">
+                </a>
+            </div>
+            <!-- Missió, Visió i Valors -->
+            <div class="col-md-6 mission-vision-values">
+                <h3>Mission</h3>
+                <p>My mission is to create innovative and functional digital experiences that meet clients needs and improve users lives.</p><br>
+                <h3>Vision</h3>
+                <p>I aspire to be recognized in the industry for my technical proficiency, the creativity of my websites, and my commitment to client satisfaction.</p><br>
+                <h3>Values</h3>
+                <p>As a web application developer, I am committed to technical excellence, creativity, and innovation. I prioritize my clients needs and pledge to act with transparency, integrity, and a strong sense of responsibility.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center" id="about-content">
+            <div class="col-md-6 text-center">
+                <!-- Nom i descripció -->
+                <h1 class="mb-4">Marc Platero Retamero</h1>
+                <h3>Web Applications Developer</h3><br>
+                <video id="videoPlayer" controls width="640" height="360" controlsList="nodownload">
+                    <source src="vid/videoInteractiu.mp4" type="video/mp4" id="mainVideo">
+                    Your browser does not support the video tag.
+                </video>
+                <div id="languageButtons" class="mt-3" style="display: none;">
+                    <button id="englishButton" class="btn btn-light text-danger mr-2">English</button>
+                    <button id="spanishButton" class="btn btn-light text-danger mr-2">Spanish</button>
+                    <button id="catalanButton" class="btn btn-light text-danger">Catalan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Secció Habilitats -->
+    <section id="skills" class="section bg-light text-dark">
+        <div class="container">
+            <h2>Skills and Languages</h2><br>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/HTML.png" alt="HTML" class="img-fluid" width="250" height="250">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/CSS.png" alt="CSS" class="img-fluid" width="147" height="147">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/JS.png" alt="JS" class="img-fluid" width="265" height="265">
+                </div>
+                <div class="col-md-4 php-image">
+                    <img src="img/PHP.png" alt="PHP" class="img-fluid" width="185" height="185">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/C_Sharp.png" alt="C#" class="img-fluid" width="135" height="135">
+                </div>
+                <div class="col-md-4 mysql-image">
+                    <img src="img/MySQL.png" alt="MySQL" class="img-fluid" width="170" height="170">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secció Portafolis -->
+    <section id="portfolio" class="section bg-danger text-white">
+        <div class="container">
+            <h2>My Portfolio</h2><br><br>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="projects/pokedexVue/index.html" class="btn btn-light" aria-label="Pokédex VUE">
+                        <div class="d-flex align-items-center">
+                            <img src="./img/pokedex.png" alt="Pokédex VUE" class="img-fluid portfolio-image">
+                            <span class="ml-2">Pokédex VUE</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="projects/pomodoro/pomodoro.html" class="btn btn-light" aria-label="Pomodoro Kanban">
+                        <div class="d-flex align-items-center">
+                            <img src="./img/pomodoro.png" alt="Pomodoro Kanban" class="img-fluid portfolio-image">
+                            <span class="ml-2">Pomodoro Kanban</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="projects/penjat/penjat.html" class="btn btn-light" aria-label="Hangman">
+                        <div class="d-flex align-items-center">
+                            <img src="./img/hangman.png" alt="Hangman" class="img-fluid portfolio-image">
+                            <span class="ml-2">Hangman</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="projects/restaurant/webApp.html" class="btn btn-light" aria-label="Restaurant">
+                        <div class="d-flex align-items-center">
+                            <img src="./img/restaurant.png" alt="Restaurant" class="img-fluid portfolio-image">
+                            <span class="ml-2">Restaurant</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="projects/calculadoraDePropines/calculadoraDePropines.html" class="btn btn-light" aria-label="Tip Calculator">
+                        <div class="d-flex align-items-center">
+                            <img src="./img/calculadora.png" alt="Tip Calculator" class="img-fluid portfolio-image">
+                            <span class="ml-2">Tip Calculator</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center mt-5">
+                <div class="col-md-8 text-center">
+                    <h3 class="mb-4 contact-heading">Interested in seeing more projects?</h3>
+                    <button class="btn btn-light text-danger contact-btn" type="button" data-toggle="collapse" data-target="#contactInfo" aria-expanded="false" aria-controls="contactInfo">
+                        Click here to contact me!
+                    </button>
+                    <div class="collapse mt-3" id="contactInfo">
+                        <p class="contact-info">You can email me at: <a href="mailto:mplateroretamero@gmail.com">mplateroretamero@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="portafolis.js"></script>
+</body>
+</html>

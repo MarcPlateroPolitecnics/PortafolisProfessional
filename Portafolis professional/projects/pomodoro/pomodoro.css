@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+
+/* POMODORO */
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 50px;
+}
+
+#pomodoro-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+#pomodoro-timer {
+    text-align: center;
+}
+
+#timer-display {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#controls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#controls button {
+    font-size: 1em;
+    margin: 0 5px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#options {
+    margin-bottom: 20px;
+}
+
+#options label {
+    margin-right: 5px;
+}
+
+#options input {
+    width: 50px;
+}
+
+#options button {
+    font-size: 1em;
+    margin: 0 5px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#start, #pause {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#reset {
+    background-color: #b12828;
+    color: white;
+}
+
+#short-break, #long-break {
+    background-color: #008CBA;
+    color: white;
+}
+
+
+/* KANBAN */
+
+#kanban-container {
+    display: flex;
+    justify-content: center;
+}
+
+#kanban-board {
+    display: flex;
+}
+
+.column {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    margin: 0 10px;
+    background-color: #f9f9f9;
+}
+
+.column h2 {
+    margin-top: 0;
+}
+
+.task {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+.task.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+    position: relative;
+}
+
+.task.completed::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px; 
+    width: 18px;
+    height: 9px;
+    border-top: 3px solid #00cc00;
+    border-right: 3px solid #00cc00;
+    transform: rotate(135deg);
+}
+
+#task-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#task-form h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#task-title,
+#task-description,
+#task-category {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.design-task {
+    background-color: lightblue;
+}
+
+.front-end-task {
+    background-color: lightgreen;
+}
+
+.back-end-task {
+    background-color: lightcoral;
+}
+
+.default-task {
+    background-color: lightgray;
+}

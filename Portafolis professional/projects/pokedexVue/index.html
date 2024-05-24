@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex Interactiva</title>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Component de la Pokédex -->
+    <div class="pokedex-container">
+      <pokedex></pokedex>
+      <div class="inventory-shop-container">
+        <!-- Component de l'Inventari -->
+        <inventory></inventory>
+        <!-- Component de la Botiga -->
+        <shop @purchase="updateInventory"></shop>
+      </div>
+    </div>
+  </div>
+
+  <template id="pokedex-template">
+    <div>
+      <!-- Secció de filtres -->
+      <div class="filters">
+        <label for="filterType">Tipus:</label>
+        <select id="filterType" v-model="selectedType">
+          <option value="">Tots</option>
+          <option v-for="type in types" :value="type">{{ type }}</option>
+        </select>
+        
+        <label for="filterRange">Rang:</label>
+        <!-- Seleccionar rang -->
+        <div class="range-container">
+          <input type="range" id="filterRangeMin" v-model="selectedRangeMin" min="1" max="151">
+          <input type="range" id="filterRangeMax" v-model="selectedRangeMax" min="1" max="151">
+          <span>{{ selectedRangeMin }} - {{ selectedRangeMax }}</span>
+        </div>
+        
+        <!-- Mostrar Pokémon preferits -->
+        <button @click="showFavorites = !showFavorites">Preferits</button>
+        <!-- Mostrar equip -->
+        <button @click="toggleShowTeam">Equip</button>
+      </div>
+      
+      <!-- Llista de Pokémon -->
+      <div class="pokemon-list">
+        <div class="pokemon-card" v-for="pokemon in filteredPokemon" :key="pokemon.id">
+          <div class="pokemon-id">{{ pokemon.id }}</div>
+          <div class="info">
+            <div>{{ capitalize(pokemon.name) }}</div>
+            <div v-for="type in pokemon.types" :class="'type-' + type.type.name">{{ capitalize(type.type.name) }}</div>
+            <img :src="pokemon.sprites.front_default" alt="pokemon image">
+          </div>
+          <button @click="toggleFavorite(pokemon)" :class="{ 'favorite': isFavorite(pokemon) }">Preferit</button>
+          <button @click="toggleTeam(pokemon)" :class="{ 'in-team': isInTeam(pokemon) }">Afegir a l'equip</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="inventory-template">
+    <!-- Plantilla de l'Inventari -->
+    <div class="inventory">
+      <h2>Inventari</h2>
+      <!-- Mostra els ítems de l'inventari -->
+      <div class="item" v-for="item in items" :key="item.name">
+        <img :src="item.icon" :alt="item.name" />
+        <div class="item-info">
+          <span>{{ item.name }}</span>
+          <span>Quantitat: {{ item.quantity }}</span>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="shop-template">
+    <!-- Plantilla de la Botiga -->
+    <div class="shop">
+      <h2>Botiga</h2>
+      <!-- Mostra els ítems disponibles per comprar -->
+      <div class="shop-item" v-for="item in shopItems" :key="item.name">
+        <img :src="item.icon" :alt="item.name" />
+        <div class="shop-item-info">
+          <span>{{ item.name }}</span>
+          <!-- Selecció de la quantitat a comprar -->
+          <div class="quantity-selector">
+            <button @click="decreaseQuantity(item)">-</button>
+            <span>{{ item.selectedQuantity }}</span>
+            <button @click="increaseQuantity(item)">+</button>
+          </div>
+          <button @click="purchaseItem(item)">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="main.js"></script>
+</body>
+</html>

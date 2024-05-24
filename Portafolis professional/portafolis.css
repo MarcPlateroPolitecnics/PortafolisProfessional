@@ -1,0 +1,251 @@
+body {
+    padding-top: 55px;
+    background-color: #E72E3E;
+    color: #FFFFFF;
+}
+
+/* Barra navegació (mantenir-la adalt)*/
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Barra navegació (marges de les opcions)*/
+.navbar .container {
+    padding-right: 450px;
+}
+
+/* Barra navegació (textos) */
+.navbar-nav .nav-link {
+    color: #FFFFFF !important;
+    transition: color 0.3s;
+    margin-left: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Barra navegació (animació textos) */
+.navbar-nav .nav-link:hover {
+    color: #000000 !important;
+}
+
+
+
+/* Sobre Mi */
+#about {
+    background-color: #000000 !important;
+    height: 815px;
+    padding-top: 70px;
+}
+
+/* Sobre Mi (posició text i img) */
+.section {
+    padding: 120px 0;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Sobre Mi (marge img i efecte transició) */
+.navbar-brand img {
+    margin-top: -480px;
+    margin-left: 485px;
+    transition: transform 0.3s ease;
+    animation: pulse 1.5s infinite;
+}
+
+/* Sobre Mi (img efecte d'amplada quan es passa el ratolí per sobre de la M) */
+.navbar-brand img:hover {
+    transform: scale(1.075);
+}
+
+/* Sobre Mi (animació de pulsació pel logo) */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Sobre Mi (img) */
+#about-header {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sobre Mi (img desplegable de informació animació) */
+#about-content {
+    opacity: 0;
+    transition: opacity 5s ease;
+    height: auto;
+}
+
+/* Sobre Mi (contingut a l'esquerra del logo) */
+#aboutContent {
+    display: none; /* Inicialment amagat */
+    padding-right: 15px; /* Espaiat del costat dret */
+}
+
+/* Sobre Mi (vídeo a la dreta del logo) */
+#videoContainer {
+    text-align: center; /* Centra el contingut */
+    padding-left: 15px; /* Espaiat del costat esquerre */
+}
+
+/* Sobre Mi (vídeo responsive) */
+#videoPlayer {
+    max-width: 100%; /* Vídeo s'ajusta al seu contenidor */
+    height: auto; /* Alçada automàtica segons l'amplada */
+}
+
+/* Sobre Mi (estils personalitzats per als botons d'idiomes) */
+#languageButtons {
+    text-align: center;
+}
+
+#languageButtons .btn {
+    color: #000000 !important; /* Color del text vermell */
+    background-color: #FFFFFF; /* Fons blanc */
+    border: 1px solid #000000; /* Vora vermella */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s; /* Transició de color en el canvi */
+}
+
+#languageButtons .btn:hover {
+    background-color: #FF5A5F; /* Fons vermell en el passar del ratolí */
+    color: #FFFFFF; /* Text blanc en el passar del ratolí */
+}
+
+/* Sobre Mi (posició textos de Missió, Visió i Valors) */
+.mission-vision-values {
+    padding-left: 50px; /* Espaiat a l'esquerra dels textos */
+    margin-top: 160px; /* Marge superior afegit */
+    opacity: 0;
+    transition: opacity 5s ease;
+}
+
+/* Sobre Mi (fonts personalitzades per als títols Missió, Visió i Valors) */
+.mission-vision-values h3 {
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Sobre Mi (fonts personalitzades per als textos de sota Missió, Visió i Valors) */
+.mission-vision-values p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+/* Habilitats */
+#skills {
+    background-color: #FFFFFF !important;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Habilitats (marge títol) */
+#skills h2 {
+    margin-bottom: 25px;
+}
+
+/* Habilitats (marge img) */
+#skills .row .col-md-4 {
+    margin-bottom: 35px;
+}
+
+/* Habilitats (marge PHP) */
+.php-image img {
+    margin-top: 25px;
+}
+
+/* Habilitats (marge MySQL) */
+.mysql-image img {
+    margin-top: 25px;
+}
+
+/* Habilitats (img efecte de transició quan es passa el ratolí per sobre de les imatges de les habilitats) */
+#skills .col-md-4 img {
+    transition: transform 0.3s ease;
+}
+
+/* Habilitats (img efecte d'amplada quan es passa el ratolí per sobre de les imatges de les habilitats) */
+#skills .col-md-4 img:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* Portafolis */
+#portfolio {
+    background-color: #E72E3E !important;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Portafolis (botons) */
+.btn {
+    background-color: #DC3545; /* Color dels botons */
+    color: #FFFFFF; /* Color del text dels botons */
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Portafolis (alinea simètricament els programes) */
+#portfolio .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Portafolis (marge entre programes) */
+#portfolio .row .col-md-4 {
+    margin-bottom: 80px; /* Incrementa aquest valor per més marge */
+}
+
+/* Estil per ajustar el tamany de les imatges del portafoli */
+.portfolio-image {
+    width: 50px; /* Ajusta a la mida desitjada */
+    height: auto; /* Manté l'aspecte original */
+}
+
+/* Portafolis (secció de missatge persuasori) */
+.contact-heading {
+    font-family: 'Roboto Slab', serif;
+    color: #FFFFFF;
+}
+
+.contact-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: #DC3545;
+    color: #FFFFFF;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #FFFFFF;
+}
+
+.contact-info {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+}
+
+.contact-info a {
+    color: #FFFFFF;
+}
+
+.contact-info a:hover {
+    color: #000000;
+}

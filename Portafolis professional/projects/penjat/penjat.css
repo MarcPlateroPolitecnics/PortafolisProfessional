@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: aquamarine;
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#timer {
+    text-align: center;
+}
+
+#hangman {
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    position: relative;
+    background-color: #32e2bc;
+}
+
+#hangman div {
+    position: absolute;
+    background-color: #000;
+}
+
+#word-mask {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #000;
+}
+
+#letter-buttons {
+    text-align: center;
+}
+
+#letter-buttons button {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+#letter-buttons button.correct {
+    background-color: green;
+    color: white;
+}
+
+#letter-buttons button.incorrect {
+    background-color: red;
+    color: white;
+}
+
+#info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#vertical-line {
+    width: 5px;
+    height: 150px;
+    top: 0;
+    left: 97px;
+}
+
+#horizontal-line {
+    width: 120px;
+    height: 5px;
+    top: 0;
+    left: 40px;
+}
+
+#head {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 5px;
+    left: 145px;
+}
+
+#body {
+    width: 5px;
+    height: 80px;
+    top: 25px;
+    left: 157px;
+}
+
+#left-arm {
+    width: 50px;
+    height: 5px;
+    top: 65px;
+    left: 116px;
+    transform: rotate(-45deg);
+}
+
+#right-arm {
+    width: 50px;
+    height: 5px;
+    top: 65px;
+    left: 153px;
+    transform: rotate(45deg);
+}
+
+#left-leg {
+    width: 50px;
+    height: 5px;
+    top: 115px;
+    left: 116px;
+    transform: rotate(-45deg);
+}
+
+#right-leg {
+    width: 50px;
+    height: 5px;
+    top: 115px;
+    left: 153px;
+    transform: rotate(45deg);
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
